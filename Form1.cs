@@ -62,6 +62,19 @@ namespace KeyEventLogger
             }
         }
 
+        private void SaveFile()
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+                saveFileDialog.Title = "Save Key Events";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllLines(saveFileDialog.FileName, keyEvents);
+                }
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -69,7 +82,7 @@ namespace KeyEventLogger
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            SaveFile();
         }
     }
 }

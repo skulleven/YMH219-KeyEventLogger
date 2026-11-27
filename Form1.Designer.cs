@@ -92,7 +92,7 @@
             Controls.Add(button1);
             Controls.Add(listBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "KeyEventLogger";
             ResumeLayout(false);
             PerformLayout();
         }
