@@ -17,13 +17,13 @@ namespace KeyEventLogger
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (recording) 
+            if (recording)
             {
                 string keyEvent = $"Key Down: {e.KeyCode}";
                 keyEvents.Add(keyEvent);
                 listBox1.Items.Add(keyEvent);
             }
-            
+
         }
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -60,6 +60,16 @@ namespace KeyEventLogger
                     recording = false;
                     break;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

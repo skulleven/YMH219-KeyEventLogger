@@ -61,6 +61,7 @@
             button2.TabIndex = 2;
             button2.Text = "Temizle";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -70,6 +71,7 @@
             button3.TabIndex = 3;
             button3.Text = "Kaydet";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
